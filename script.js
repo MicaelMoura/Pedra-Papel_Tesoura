@@ -11,6 +11,10 @@ function vezOponente(){
     let ran = Math.floor(Math.random()*3);
 
     let escolhaOp = document.querySelector('img[name=opt-'+ran+']');
+
+    for(i = 0; i < 3; i++){
+        document.querySelector('img[name=opt-'+i+']').style.opacity = 0.3;
+    }
     
     escolhaOp.style.opacity = 1;
 }
