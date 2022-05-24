@@ -10,9 +10,9 @@ function resetPlayer(){
 function vezOponente(){
     let ran = Math.floor(Math.random()*3);
 
-    var JogadaOponente = document.querySelectorAll('.enemy-options div');
-
+    let escolhaOp = document.querySelector('img[name=opt-'+ran+']');
     
+    escolhaOp.style.opacity = 1;
 }
 
 for(var i = 0; i < elementosPlayer.length; i++){
