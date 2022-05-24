@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedra | Papel | Tesoura</title>
+    <style>
+        .player-options img,
+        .enemy-options img
+        {
+            width: 120px;
+            opacity: 0.3;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .player-options img:hover{            
+            opacity: 0.5;
+        }
+
+        .player-options, .enemy-options{
+            width: 50%;
+            text-align: center;
+        }
+
+        .align{
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Pedra, Pepel ou tesoura</h1>
+    <hr>
+
+    <div class="align">
+        <div class="player-options">
+            <div><img opt="pedra" src="Imagens/Pedra.png" alt="Pedra"></div>
+            <div><img opt="papel" src="Imagens/Papel.png" alt="Papel"></div>
+            <div><img opt="tesoura" src="Imagens/Tesoura.png" alt="Tesoura"></div>
+        </div>
+
+        <div class="enemy-options">
+            <div><img src="Imagens/Pedra.png" alt="Pedra"></div>
+            <div><img src="Imagens/Papel.png" alt="Papel"></div>
+            <div><img src="Imagens/Tesoura.png" alt="Tesoura"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
