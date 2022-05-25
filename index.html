@@ -6,6 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pedra | Papel | Tesoura</title>
     <style>
+        * {
+           margin: 0px; 
+        }
+
+        body {
+            background-color: rgb(27, 27, 139);
+        }
+
+        .bar-title{
+            text-align: center;
+            padding: 10px;
+            margin-bottom: 50px;
+            color: white;
+            background-color: rgb(27, 158, 219);
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        
         .player-options img,
         .enemy-options img
         {
@@ -20,7 +37,7 @@
         }
 
         .player-options img:hover{            
-            opacity: 0.5;
+            opacity: 0.6;
         }
 
         .player-options, .enemy-options{
@@ -29,25 +46,88 @@
         }
 
         .align{
-            display: flex;
+            display: flex;            
+        }
+
+        .panel-player,
+        .panel-enemy
+        {
+            width: 200px;
+            margin: auto;
+            padding: 25px 0;
+            border-radius: 0 0 50px 50px;
+        }
+
+        .panel-enemy, .panel-player{
+            border-left: solid 5px white;
+            border-right: solid 5px white;
+            background-color: darkgray;
+        }
+
+        .bar-Player,
+        .bar-enemy{
+            width: 200px;
+            margin: auto;
+            border-radius: 50px 50px 0 0;
+        }
+
+        .bar-Player{
+            padding: 25px 0;
+            background-color: white;
+            border-top: solid 5px white;
+            border-left: solid 5px white;
+            border-right: solid 5px white;
+            color: rgb(27, 27, 139);
+            font-size: 25px;
+            font-family: fantasy;
+        }
+
+        .bar-enemy{
+            padding: 40px 0;
+            background-image: url("Imagens/inimigo_espera.png");
+            background-color: white;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-top: solid 5px white;
+            border-left: solid 5px white;
+            border-right: solid 5px white;
+        }
+
+        .bar-enemy:hover{
+            background-image: url("Imagens/inimigo_hover.png");
+        }
+
+        .vs{
+            position: absolute;
+            top: 45%;
+            left: 45%;
+            color: white;
+            font-size: 30px;
         }
     </style>
 </head>
 <body>
-    <h1 style="text-align: center;">Pedra, Pepel ou tesoura</h1>
-    <hr>
-
+    <div class="bar-title">
+        <h1>Pedra, Pepel ou tesoura</h1>
+    </div>
+    <div class="vs"><h1>VS</h1></div>
     <div class="align">
         <div class="player-options">
-            <div><img opt="pedra" src="Imagens/Pedra.png" alt="Pedra"></div>
-            <div><img opt="papel" src="Imagens/Papel.png" alt="Papel"></div>
-            <div><img opt="tesoura" src="Imagens/Tesoura.png" alt="Tesoura"></div>
+            <div class="bar-Player">Faça sua escolha:</div>
+            <div class="panel-player">
+                <div><img opt="pedra" src="Imagens/Pedra.png" alt="Pedra"></div>
+                <div><img opt="papel" src="Imagens/Papel.png" alt="Papel"></div>
+                <div><img opt="tesoura" src="Imagens/Tesoura.png" alt="Tesoura"></div>
+            </div>
         </div>
-
         <div class="enemy-options">
-            <div><img name="opt-0" src="Imagens/Pedra.png" alt="Pedra"></div>
-            <div><img name="opt-1" src="Imagens/Papel.png" alt="Papel"></div>
-            <div><img name="opt-2" src="Imagens/Tesoura.png" alt="Tesoura"></div>
+            <div class="bar-enemy"></div>
+            <div class="panel-enemy">
+                <div><img name="opt-0" src="Imagens/Pedra.png" alt="Pedra"></div>
+                <div><img name="opt-1" src="Imagens/Papel.png" alt="Papel"></div>
+                <div><img name="opt-2" src="Imagens/Tesoura.png" alt="Tesoura"></div>
+            </div>
         </div>
     </div>
 
